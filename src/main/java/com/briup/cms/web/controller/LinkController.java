@@ -48,7 +48,7 @@ public class LinkController {
         Link link = linkService.queryById(id);
         return MessageUtil.success(link);
     }
-    @GetMapping("/update")
+    @PostMapping("/update")
     @ApiOperation("更新")
     public Message update(Link link) {
         linkService.saveOrUpdateLink(link);
